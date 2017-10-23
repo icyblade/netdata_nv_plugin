@@ -169,13 +169,13 @@ class Service(SimpleService):
 			## Memory
 			if data['device_mem_used_'+str(i)] is not None:
 				self.definitions['memory']['lines'].append(['device_mem_used_' + gpuIdx, 'used [{0}]'.format(i), 'absolute', 1, 1024**2])
-				self.definitions['memory']['lines'].append(['device_mem_free_' + gpuIdx, 'free [{0}]'.format(i), 'absolute', 1, 1024**2])
-			# self.definitions['memory']['lines'].append(['device_mem_total_' + gpuIdx, 'GPU:{0} total'.format(i), 'absolute', -1, 1024**2])
+				# self.definitions['memory']['lines'].append(['device_mem_free_' + gpuIdx, 'free [{0}]'.format(i), 'absolute', 1, 1024**2])
+			    # self.definitions['memory']['lines'].append(['device_mem_total_' + gpuIdx, 'GPU:{0} total'.format(i), 'absolute', -1, 1024**2])
 
 			## Load/usage
 			if data['device_load_gpu_' + gpuIdx] is not None:
 				self.definitions['load']['lines'].append(['device_load_gpu_' + gpuIdx, 'gpu [{0}]'.format(i), 'absolute'])
-				self.definitions['load']['lines'].append(['device_load_mem_' + gpuIdx, 'memory [{0}]'.format(i), 'absolute'])
+				# self.definitions['load']['lines'].append(['device_load_mem_' + gpuIdx, 'memory [{0}]'.format(i), 'absolute'])
 
 			## ECC errors
 			if data['device_ecc_errors_L1_CACHE_VOLATILE_CORRECTED_' + gpuIdx] is not None:
